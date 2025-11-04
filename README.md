@@ -5,10 +5,10 @@
  - enable wsl: cài đặt docker desktop
  - enable wsl: cài đặt ubuntu
  - sử dụng Hyper-V: cài đặt ubuntu
- -
+ - sử dụng VMware : cài đặt ubuntu
  - sử dụng Virtual Box: cài đặt ubuntu
 
-===> chọn: sử dụng VMware : cài đặt ubuntu
+==> chọn: enable wsl: cài đặt docker desktop
 
 2. Cài đặt Docker (nếu dùng docker desktop trên windows thì nó có ngay)
 3. Sử dụng 1 file docker-compose.yml để cài đặt các docker container sau: 
@@ -36,32 +36,8 @@
  - Cấu hình nginx để http://fullname.com/nodered truy cập vào nodered qua cổng 80, (dù nodered đang chạy ở port 1880)
  - Cấu hình nginx để http://fullname.com/grafana truy cập vào grafana qua cổng 80, (dù grafana đang chạy ở port 3000)
 _____
-1. Cài đặt môi trường linux: sử dụng VMware : cài đặt ubuntu
+1. Cài đặt môi trường linux: enable wsl: cài đặt docker desktop
 
-Bước 1: chuẩn bị:
+- Kích hoạt WSL: Mở CMD với quyền Administrator chạy lệnh wsl --install --> Restart --> Cài đặt một bản phân phối Linux: chạy lệnh wsl --install -d Ubuntu
 
-- Tải và cài đặt VMware Workstation 17 Pro
-<img width="871" height="475" alt="Screenshot 2025-11-04 194648" src="https://github.com/user-attachments/assets/e39e361a-b836-487d-a9f3-8a38372dad51" />
-
-- Tải và cài đặt Ubuntu 24.04.3 LTS iso
-<img width="900" height="259" alt="image" src="https://github.com/user-attachments/assets/4bcace41-e524-45ae-819c-25029f7f70c5" />
-
-Bước 2: Tạo máy ảo (New Virtual Machine) trên VMware
-
-- Mở VMware → Create a New Virtual Machine
-
-<img width="1919" height="1030" alt="image" src="https://github.com/user-attachments/assets/dd20ea82-f7a0-4a3e-b9d7-bcd6bfaa26ba" />
-
-- Chọn Installer disc image file (iso) → chọn file ISO Ubuntu.
-- Chọn hệ điều hành: Linux → Ubuntu 64-bit.
-- Đặt tên VM và vị trí lưu.
-- Cấu hình phần cứng (Customize Hardware)
-
-<img width="420" height="351" alt="image" src="https://github.com/user-attachments/assets/63fbf431-87a6-4c48-97ac-659e0a540dec" />
-
-Bước 3: Cài Ubuntu: Boot từ ISO -> chọn Install Ubuntu Server -) Chọn ngôn ngữ -> Chọn layout bàn phím -> Cấu hình Network connections -> Tạo Profile setup: create user -> Install OpenSSH server -> Finish installation -> reboot VM
-
-==> Chạy và đăng nhập với user đã tạo trước đó
-<img width="1378" height="875" alt="image" src="https://github.com/user-attachments/assets/e974e35f-4eed-422b-8850-f979cb6c06a1" />
-
-2. Cài đặt Docker
+<img width="1216" height="419" alt="image" src="https://github.com/user-attachments/assets/a816c3b9-d370-4f6c-8bcd-5a529b1f2cdc" />
