@@ -38,6 +38,14 @@
 _____
 1. Cài đặt môi trường linux: enable wsl: cài đặt docker desktop
 
-- Kích hoạt WSL: Mở CMD với quyền Administrator chạy lệnh wsl --install --> Restart --> Cài đặt một bản phân phối Linux: chạy lệnh wsl --install -d Ubuntu
+- Kích hoạt WSL: Mở CMD với quyền Administrator chạy lệnh wsl --install --> Restart
 
 <img width="1216" height="419" alt="image" src="https://github.com/user-attachments/assets/a816c3b9-d370-4f6c-8bcd-5a529b1f2cdc" />
+
+- Cài đặt một bản phân phối Linux: chạy lệnh wsl --install -d Ubuntu --> Tạo User
+
+<img width="1085" height="486" alt="Screenshot 2025-11-04 215622" src="https://github.com/user-attachments/assets/8ae5f0c7-a69e-4bab-8004-15e618c7301b" />
+
+- Tải và cài đặt docker desktop:
+
+<img width="913" height="645" alt="image" src="https://github.com/user-attachments/assets/75209cd4-8a2f-463b-9b0a-520a4906b49b" />
