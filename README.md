@@ -74,6 +74,80 @@ _____
 
 - Cấu hình File Hosts: Mở Notepad với quyền Administrator mở file C:\Windows\System32\drivers\etc\hosts và thêm 127.0.0.1 nguyenmanhhieu.com
 
-- Kiểm tra: http://localhost:8080 , http://nguyenmanhhieu.com/nodered , http://nguyenmanhhieu.com/grafana
+- Kiểm tra: http://localhost:8080 , http://nguyenmanhhieu.com/nodered/ , http://nguyenmanhhieu.com/grafana/
 
 <img width="1904" height="1027" alt="Screenshot 2025-11-05 163615" src="https://github.com/user-attachments/assets/c7bd4976-878e-47b4-ae13-ea7daf867be8" />
+
+<img width="1919" height="1027" alt="image" src="https://github.com/user-attachments/assets/02c46af9-f818-49e7-a9b7-5ab9b4e6e46b" />
+
+<img width="1919" height="1031" alt="image" src="https://github.com/user-attachments/assets/fea5574b-7aba-41f3-a488-3bc895ded958" />
+
+4. Lập trình web frontend+backend: Website đặt đồ ăn online cho của hàng TNUT
+
+- Chuẩn bị database: truy cập PhpMyAdmin: http://localhost:8080 --> Chọn database tnut_food được tạo bởi docker-compose
+
+- Tạo các bảng: users(người dùng), categories(nhóm sản phẩm), products(sản phẩm), orders(đơn hàng), và order_items(chi tiết đơn hàng)
+
+<img width="1276" height="206" alt="Screenshot 2025-11-06 204034" src="https://github.com/user-attachments/assets/099705e1-5db7-4715-8d00-9d4ddc7e4138" />
+
+- Thêm dữ liệu vào các bảng:
+
+<img width="450" height="180" alt="image" src="https://github.com/user-attachments/assets/29bf995e-a64d-4be2-bc2b-75606354bd6f" />
+
+<img width="1035" height="173" alt="image" src="https://github.com/user-attachments/assets/d9e06417-92a8-44a3-a3ad-d0ece83c2251" />
+
+- Truy cập Nodered --> cài đặt node-red-contrib-mysql và node-red-contrib-bcrypt
+
+<img width="952" height="704" alt="Screenshot 2025-11-06 204821" src="https://github.com/user-attachments/assets/daab8354-1785-4498-a048-7799bf7b1979" />
+
+<img width="960" height="606" alt="image" src="https://github.com/user-attachments/assets/b89f274a-a73d-4ea8-8326-798e476da65f" />
+
+- Tạo luồng flow1: API đăng ký User
+
+<img width="1314" height="377" alt="image" src="https://github.com/user-attachments/assets/8d7449ca-65f0-4c87-b9e3-ef10ade9adc5" />
+
+- Kiểm thử bằng Postman: Request: POST đến http://nguyenmanhhieu.com/nodered/api/register và Body (raw/json): Gửi thông tin user admin và password (dạng plain-text)
+
+<img width="1055" height="807" alt="image" src="https://github.com/user-attachments/assets/7a249879-00d6-4cfe-ac30-e78bd3952ffa" />
+
+--> : Sau khi Postman báo thành công vào PhpMyAdmin kiểm tra --> bảng users đã có 1 hàng mới
+
+<img width="1428" height="257" alt="image" src="https://github.com/user-attachments/assets/4ba318f5-5853-4307-b6e1-ac9e029eb4bf" />
+
+- Tạo luồng flow2: API đăng nhập
+
+<img width="1259" height="780" alt="image" src="https://github.com/user-attachments/assets/bc9d3289-c628-4c71-b2c8-ab441afa3edb" />
+
+- Kiểm thử: với mật khẩu sai và đúng
+
+<img width="1064" height="842" alt="image" src="https://github.com/user-attachments/assets/cb6a177a-d3a1-44d9-8fc5-6f39ea287cb6" />
+
+<img width="1050" height="833" alt="image" src="https://github.com/user-attachments/assets/3757df5b-76b6-4983-99aa-40a07b9cdf8e" />
+
+- Tạo API Liệt Kê Danh Sách Sản Phẩm:
+
+<img width="1089" height="390" alt="image" src="https://github.com/user-attachments/assets/06a548fb-52c5-4fd4-9462-7371992e8553" />
+
+- Truy cập http://nguyenmanhhieu.com/nodered/api/products để kiểm tra
+
+<img width="466" height="643" alt="image" src="https://github.com/user-attachments/assets/e2c4adfb-00c5-42db-86d0-973283b0ae5c" />
+
+- Tạo API Liệt Kê Nhóm Sản Phẩm:
+
+<img width="1164" height="308" alt="image" src="https://github.com/user-attachments/assets/631ab1e8-d7eb-4903-baaf-06f3bc04a4ef" />
+
+- Truy cập http://nguyenmanhhieu.com/nodered/api/categories để kiểm tra
+
+<img width="251" height="418" alt="image" src="https://github.com/user-attachments/assets/e233e6ac-39a0-4573-bc19-a1304c10f5d6" />
+
+--> Sửa API Lấy Danh Sách Sản Phẩm để có thể tìm kiếm theo sản phẩm
+
+<img width="814" height="484" alt="image" src="https://github.com/user-attachments/assets/ff0c1ba7-b564-445b-ab10-8fbec6774968" />
+
+- Tạo API Đặt hàng:
+
+<img width="1180" height="574" alt="image" src="https://github.com/user-attachments/assets/df52e05a-11a9-420c-9185-badeb60447b3" />
+
+- Web đặt đồ ăn online:
+
+<img width="1917" height="997" alt="image" src="https://github.com/user-attachments/assets/84d126fc-8e08-43e0-8e59-04c9ba3a6c88" />
