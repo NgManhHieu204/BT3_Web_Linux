@@ -122,7 +122,7 @@ _____
 
 <img width="1064" height="842" alt="image" src="https://github.com/user-attachments/assets/cb6a177a-d3a1-44d9-8fc5-6f39ea287cb6" />
 
-<img width="1050" height="833" alt="image" src="https://github.com/user-attachments/assets/3757df5b-76b6-4983-99aa-40a07b9cdf8e" />
+<img width="1077" height="810" alt="image" src="https://github.com/user-attachments/assets/5c71b076-5ba8-4c5b-909e-6cfffc14fa7c" />
 
 - Tạo API Liệt Kê Danh Sách Sản Phẩm:
 
